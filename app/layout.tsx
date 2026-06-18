@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import Script from 'next/script'
 import type { Metadata, Viewport } from "next";
 import type { CSSProperties } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from "./components/Navbar";
 import Productbar from "./components/Productbar";
 import { theme as defaultTheme } from "@/lib/theme";
@@ -121,6 +122,7 @@ export default async function RootLayout({
         {children}
         <SupportButton initialSettings={settings} />
         <NotificationToast />
+        <SpeedInsights />
       </body>
     </html>
   );
